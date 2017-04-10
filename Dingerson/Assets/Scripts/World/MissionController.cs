@@ -23,6 +23,6 @@ public class MissionController : MonoBehaviour {
         ///Create a switch statement based on the buttonId to update current Mission to the resultant mission of the Option held
         ///at the same index of the OptionButton array.
         ///Simple tutorial for a switch can be found here https://www.tutorialspoint.com/csharp/switch_statement_in_csharp.htm
-        ///buttonId 
+        ///buttonId is the variable for the switch statement.  The cases will be 0 and 1.
     }
 }
