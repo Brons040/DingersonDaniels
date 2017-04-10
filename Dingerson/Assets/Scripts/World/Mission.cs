@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Mission {
 
-    ///TODO:
-    ///Create the public properties for Missions
-    ///Array of Options
-    ///Mission Text
+    public string missionText;
+    public string missionName;
+
+    public Option[] options;
 	
 }
