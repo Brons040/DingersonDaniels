@@ -8,6 +8,11 @@ public class Character {
     ///Use getters and setters to protect key properties
     ///
 
+
+
+
+
+
     private int _exampleInt;
     public int ExampleInt { get { return _exampleInt; } set { _exampleInt = value; } }
 
