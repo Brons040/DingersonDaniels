@@ -29,6 +29,7 @@ public class MissionController : MonoBehaviour {
         //Debug.Log(JsonUtility.ToJson(m));
         //SaveMissionInfo(JsonUtility.ToJson(mc, true));
         ReadMissionInfo();
+        CurrentMission = Missions[0];
        
     }
 
