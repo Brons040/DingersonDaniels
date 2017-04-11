@@ -21,6 +21,7 @@ public class MissionController : MonoBehaviour {
 
     void Start()
     {
+        Missions = new List<Mission>();
         _instance = this;
         Character c = new Character();
         c.Experience += 100;
@@ -38,12 +39,26 @@ public class MissionController : MonoBehaviour {
         ///Now take the mission stored in current mission and transpose its variable onto these UI elements on the View
         /// https://docs.unity3d.com/ScriptReference/UI.Button.html
         /// https://docs.unity3d.com/ScriptReference/UI.Text.html
+        /// 
+        MissionTextItem.text = CurrentMission.missionText;
+
+        Debug.Log(CurrentMission.missionText + "!!");
+        
+        for(int i = 0; i < OptionButtons.Length; i++)
+        {
+            OptionButtons[i].GetComponentInChildren<Text>().text = CurrentMission.options[i].optionsText;
+        }
     } 
          
     public void UpdateMission(int buttonId)
     {       
+        foreach(Mission missio in Missions)
+        {
+            if (missio.missionId == CurrentMission.options[buttonId]._missionId)
+                CurrentMission = missio;
+        }
 
-        CurrentMission = CurrentMission.options[buttonId].resultantMission;
+        //CurrentMission = CurrentMission.options[buttonId].resultantMission;
 
     }
 
@@ -78,6 +93,7 @@ public class MissionController : MonoBehaviour {
         foreach(Mission mission in tempMissions)
         {
             Missions.Add(mission);
+            Debug.Log(mission.missionText + "!?");
         }
         Debug.Log(tempMissions.Length);
     }
