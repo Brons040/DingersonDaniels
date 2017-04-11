@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Mission {
 
+    public int missionId;
     public string missionText;
     public string missionName;
 
