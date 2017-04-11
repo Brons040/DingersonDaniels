@@ -11,6 +11,12 @@ public class MissionController : MonoBehaviour {
     public Text MissionTextItem;
     public Button[] OptionButtons;
 
+    void Start()
+    {
+        Character c = new Character();
+        c.Experience += 100;
+    }
+
     private void UpdateUI()
     {
         ///Now take the mission stored in current mission and transpose its variable onto these UI elements on the View
@@ -24,5 +30,8 @@ public class MissionController : MonoBehaviour {
         ///at the same index of the OptionButton array.
         ///Simple tutorial for a switch can be found here https://www.tutorialspoint.com/csharp/switch_statement_in_csharp.htm
         ///buttonId is the variable for the switch statement.  The cases will be 0 and 1.
+
+        CurrentMission = CurrentMission.options[buttonId].resultantMission;
+
     }
 }

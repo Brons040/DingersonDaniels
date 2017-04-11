@@ -19,11 +19,12 @@ public class Character {
     
     public void LevelUp()
     {
-
+        Debug.Log("Leveled Up");
     }
 
     public void CheckLevelUp()
     {
+       
         if (_experience >= 100)
         {
             Level++;

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Option {
 
-    ///TODO
-    ///Create the properties of an option
-    ///Consider the resource class that has been created    
+    public string optionsText;
+    public Mission resultantMission;  
 	
 }
