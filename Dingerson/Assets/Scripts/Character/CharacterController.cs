@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour {
 
+    public Text[] AttributeTextItems;
 	// Use this for initialization
 	void Start () {
 		
