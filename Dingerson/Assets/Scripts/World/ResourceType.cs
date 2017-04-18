@@ -1,4 +1,4 @@
-﻿enum ResourceType{
+﻿public enum ResourceType{
 
 	Gold,
     Food,

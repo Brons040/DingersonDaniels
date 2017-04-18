@@ -15,8 +15,34 @@ public class Character {
     private int _experience;
     public int Experience { get { return _experience; } set { _experience = value; CheckLevelUp(); } }
 
-   
-    
+    public Equipment[] equipment;
+
+    public Attribute[] attributes;
+
+    public Resource[] recources;
+
+    public Character()
+    {
+        attributes = new Attribute[4] {new Attribute(Attribute.AttributeType.Dexterity),
+
+                                       new Attribute(Attribute.AttributeType.Intelligence),
+                                       new Attribute(Attribute.AttributeType.Fortitude),
+                                       new Attribute(Attribute.AttributeType.Stength) };
+
+
+
+        recources = new Resource[3]
+        {
+            new Resource(ResourceType.Food),
+            new Resource(ResourceType.Gold),
+            new Resource(ResourceType.Water)
+        };
+
+
+  
+
+
+    }
     public void LevelUp()
     {
         Debug.Log("Leveled Up");
@@ -31,4 +57,10 @@ public class Character {
             _experience = 0;
         }
     }
+
+    
+
+
+
+
 }

@@ -15,6 +15,14 @@ public class Option {
     public int _missionId;
     public int MissionId { get { return _missionId; } set { _missionId = value;  resultantMission = MissionController.Instance.Missions[value]; } }
     [System.NonSerialized]
-    public Mission resultantMission;  
+    public Mission resultantMission;
+
+    public Attribute attributeModifier;
+
+    public Resource resourceModifier;
+
+    public int dropChance;
+
+
 	
 }

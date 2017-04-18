@@ -48,6 +48,10 @@ public class MissionController : MonoBehaviour {
         {
             OptionButtons[i].GetComponentInChildren<Text>().text = CurrentMission.options[i].optionsText;
         }
+
+        
+
+
     } 
          
     public void UpdateMission(int buttonId)
@@ -56,12 +60,28 @@ public class MissionController : MonoBehaviour {
         {
             if (missio.missionId == CurrentMission.options[buttonId]._missionId)
                 CurrentMission = missio;
+            ProcessOption(CurrentMission.options[buttonId]);
         }
 
         //CurrentMission = CurrentMission.options[buttonId].resultantMission;
 
     }
+    public void ProcessOption(Option temp)
+    {
+        CharacterController.Instance.ChangeAttributeValue(temp.attributeModifier);
 
+        CharacterController.Instance.ChangeResourceValue(temp.resourceModifier);
+
+        if (temp.dropChance >= Random.Range(0, 100))
+        {
+            CharacterController.Instance.GenerateEquipment();
+
+        }
+
+        
+        
+        
+    }
     public void SaveMissionInfo(string json)
     {        
         string path = null;

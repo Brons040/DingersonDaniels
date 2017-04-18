@@ -5,7 +5,16 @@ using UnityEngine;
 
 public class Resource {
 
-    ResourceType type;
-    int amount;
-	
+    public ResourceType type;
+    public int amount;
+
+
+public Resource(ResourceType temp)
+    {
+        type = temp;
+    }
+
+
+
+
 }
