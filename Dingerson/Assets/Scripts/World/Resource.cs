@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[System.Serializable]
 public class Resource {
 
-    ResourceType type;
-    int amount;
+    public ResourceType type;
+    public int amount;
+
+    public Resource(ResourceType newType, int newAmount)
+    {
+        type = newType;
+        this.amount = newAmount;
+    }
 	
 }

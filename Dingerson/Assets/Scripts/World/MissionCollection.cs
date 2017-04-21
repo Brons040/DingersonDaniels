@@ -6,4 +6,5 @@ using UnityEngine;
 public class MissionCollection {
 
     public Mission[] missions;
+    
 }

@@ -2,33 +2,103 @@
     "missions": [
         {
             "missionId": 0,
-            "missionText": "Dump or don't dump?",
-            "missionName": "Poop",
+            "missionText": "Dump?",
+            "missionName": "Dump Test",
             "options": [
                 {
                     "optionsText": "Yes",
-                    "_missionId": 1
+                    "_missionId": 1,
+                    "dropChance": 50,
+                    "attributeModifier": {
+                        "type": 3,
+                        "amount": 2
+                    },
+                    "resourceModifier": {
+                        "type": 0,
+                        "amount": 100
+                    }
                 },
                 {
                     "optionsText": "No",
-                    "_missionId": 2
-                }
+                    "_missionId": 2,
+                    "dropChance": 100,
+                    "attributeModifier": {
+                        "type": 3,
+                        "amount": -2
+                    },
+                    "resourceModifier": {
+                        "type": 0,
+                        "amount": -50
+                    }
+                }           
             ]
         },
-        {
+		{
             "missionId": 1,
-            "missionText": "Dump1 or don't dump1?",
-            "missionName": "Poop1",
+            "missionText": "Dump1?",
+            "missionName": "Dump Test",
             "options": [
                 {
                     "optionsText": "Yes",
-                    "_missionId": 2
+                    "_missionId": 1,
+                    "dropChance": 50,
+                    "attributeModifier": {
+                        "type": 3,
+                        "amount": 2
+                    },
+                    "resourceModifier": {
+                        "type": 0,
+                        "amount": 100
+                    }
                 },
                 {
                     "optionsText": "No",
-                    "_missionId": 3
-                }
+                    "_missionId": 2,
+                    "dropChance": 100,
+                    "attributeModifier": {
+                        "type": 3,
+                        "amount": -2
+                    },
+                    "resourceModifier": {
+                        "type": 0,
+                        "amount": -50
+                    }
+                }           
+            ]
+        },
+		{
+            "missionId": 2,
+            "missionText": "Dump2?",
+            "missionName": "Dump Test",
+            "options": [
+                {
+                    "optionsText": "Yes",
+                    "_missionId": 1,
+                    "dropChance": 50,
+                    "attributeModifier": {
+                        "type": 3,
+                        "amount": 2
+                    },
+                    "resourceModifier": {
+                        "type": 0,
+                        "amount": 100
+                    }
+                },
+                {
+                    "optionsText": "No",
+                    "_missionId": 2,
+                    "dropChance": 100,
+                    "attributeModifier": {
+                        "type": 3,
+                        "amount": -2
+                    },
+                    "resourceModifier": {
+                        "type": 0,
+                        "amount": -50
+                    }
+                }           
             ]
         }
+
     ]
 }

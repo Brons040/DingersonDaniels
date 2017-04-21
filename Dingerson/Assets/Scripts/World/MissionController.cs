@@ -24,13 +24,29 @@ public class MissionController : MonoBehaviour {
         Missions = new List<Mission>();
         _instance = this;
         Character c = new Character();
-        c.Experience += 100;
+        /**Option option1 = new Option("Yes", 1);
+        Option option2 = new Option("No", 2);
+        option1.dropChance = 50;
+        option2.dropChance = 100;
+        option1.resourceModifier = new Resource(ResourceType.Gold, 100);
+        option2.resourceModifier = new Resource(ResourceType.Gold, -50);
+        option1.attributeModifier = new Attribute(Attribute.AttributeType.Fortitude, 2);
+        option2.attributeModifier = new Attribute(Attribute.AttributeType.Fortitude, -2);
+        Mission m = new Mission();
+        m.missionText = "Dump?";
+        m.missionName = "Dump Test";
+        m.missionId = 0;
+        m.options = new Option[2] { option1, option2 };
 
-        
+        MissionCollection mc = new MissionCollection();
+        mc.missions = new Mission[1] { m };*/
+    
         //Debug.Log(JsonUtility.ToJson(m));
         //SaveMissionInfo(JsonUtility.ToJson(mc, true));
         ReadMissionInfo();
+        //Missions.Add(m);
         CurrentMission = Missions[0];
+        //CharacterController.Instance.UpdateUI();
        
     }
 
@@ -51,12 +67,16 @@ public class MissionController : MonoBehaviour {
     } 
          
     public void UpdateMission(int buttonId)
-    {       
+    {
+        Option o = CurrentMission.options[buttonId];
         foreach(Mission missio in Missions)
         {
-            if (missio.missionId == CurrentMission.options[buttonId]._missionId)
+            if (missio.missionId == CurrentMission.options[buttonId]._missionId)  
                 CurrentMission = missio;
         }
+        CharacterController.Instance.ChangeAttributeValue(o.attributeModifier.type, o.attributeModifier.amount);
+        CharacterController.Instance.ChangeResourceValue(o.resourceModifier.type, o.resourceModifier.amount);
+        CharacterController.Instance.UpdateUI();
 
         //CurrentMission = CurrentMission.options[buttonId].resultantMission;
 
@@ -90,6 +110,7 @@ public class MissionController : MonoBehaviour {
     {
         MissionCollection mc = JsonUtility.FromJson<MissionCollection>(jsonFile.text);
         Mission[] tempMissions = mc.missions;
+        Debug.Log(mc.missions.Length);
         foreach(Mission mission in tempMissions)
         {
             Missions.Add(mission);
