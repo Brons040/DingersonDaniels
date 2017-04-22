@@ -10,6 +10,9 @@ public class MissionController : MonoBehaviour {
     public Mission CurrentMission { get { return _currentMission; } set { _currentMission = value; UpdateUI();  } }
 
     public TextAsset jsonFile;
+    public TextAsset langFile;
+
+    public Language lang;
 
     private static MissionController _instance;
     public static MissionController Instance { get { return _instance; } }
@@ -24,6 +27,10 @@ public class MissionController : MonoBehaviour {
         Missions = new List<Mission>();
         _instance = this;
         Character c = new Character();
+        lang = new Language();
+        lang.ac = ReadLanguageInfo();
+        lang.PrintAlphabet();    
+        
         /**Option option1 = new Option("Yes", 1);
         Option option2 = new Option("No", 2);
         option1.dropChance = 50;
@@ -40,7 +47,7 @@ public class MissionController : MonoBehaviour {
 
         MissionCollection mc = new MissionCollection();
         mc.missions = new Mission[1] { m };*/
-    
+
         //Debug.Log(JsonUtility.ToJson(m));
         //SaveMissionInfo(JsonUtility.ToJson(mc, true));
         ReadMissionInfo();
@@ -82,15 +89,15 @@ public class MissionController : MonoBehaviour {
 
     }
 
-    public void SaveMissionInfo(string json)
+    public void SaveMissionInfo(string json, string fileName)
     {        
         string path = null;
 #if UNITY_EDITOR
-        path = "Assets/Resources/GameJSONData/ItemInfo.json";
+        path = "Assets/Resources/GameJSONData/" + fileName + "ItemInfo.json";
 #endif
 #if UNITY_STANDALONE
         // You cannot add a subfolder, at least it does not work for me
-        path = "Assets/Resources/ItemInfo.json";
+        path = "Assets/Resources/" + fileName + ".json";
      #endif
 
         string str = json;
@@ -104,6 +111,12 @@ public class MissionController : MonoBehaviour {
 #if UNITY_EDITOR
         UnityEditor.AssetDatabase.Refresh();
 #endif
+    }
+
+    public AlphabetCollection ReadLanguageInfo()
+    {
+        AlphabetCollection ac = JsonUtility.FromJson<AlphabetCollection>(langFile.text);
+        return ac;
     }
 
     public void ReadMissionInfo()

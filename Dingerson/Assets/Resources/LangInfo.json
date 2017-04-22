@@ -1,0 +1,212 @@
+{
+    "alphabetKeys": [
+        {
+            "alphaKey": 97,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 98,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 99,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 100,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 101,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 102,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 103,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 104,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 105,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 106,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 107,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 108,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 109,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 110,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 111,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 112,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 113,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 114,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 115,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 116,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 117,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 118,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 119,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 120,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 121,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        },
+        {
+            "alphaKey": 122,
+            "allowedFollowKeys": [
+                97,
+                98,
+                99
+            ]
+        }
+    ]
+}
