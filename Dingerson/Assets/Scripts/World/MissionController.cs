@@ -27,10 +27,7 @@ public class MissionController : MonoBehaviour {
         Missions = new List<Mission>();
         _instance = this;
         Character c = new Character();
-        lang = new Language();
-        lang.ac = ReadLanguageInfo();
-        lang.PrintAlphabet();    
-        
+
         /**Option option1 = new Option("Yes", 1);
         Option option2 = new Option("No", 2);
         option1.dropChance = 50;
@@ -49,9 +46,9 @@ public class MissionController : MonoBehaviour {
         mc.missions = new Mission[1] { m };*/
 
         //Debug.Log(JsonUtility.ToJson(m));
-        //SaveMissionInfo(JsonUtility.ToJson(mc, true));
-        ReadMissionInfo();
+        //SaveMissionInfo(JsonUtility.ToJson(mc, true));       
         //Missions.Add(m);
+        ReadMissionInfo();
         CurrentMission = Missions[0];
         //CharacterController.Instance.UpdateUI();
        

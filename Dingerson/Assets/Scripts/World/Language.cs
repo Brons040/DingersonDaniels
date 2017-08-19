@@ -12,9 +12,17 @@ public class Language {
         char[] chArray = word.ToCharArray();
         for (int i = 0; i < chArray.Length; i++)
         {
-            chArray[i] = char.ConvertFromUtf32(Random.Range(97, 122))[0];
-        }
-        Debug.Log(new string(chArray) + " from " + word);
+            if (i == 0)
+            {
+                chArray[i] = char.ConvertFromUtf32(Random.Range(97, 122))[0];                
+            }
+            else
+            {
+                char[] allowedKeys = ac.FindAlphabetKeyByCharacter(chArray[i-1]).allowedFollowKeys;  
+                //Add handling for double letter, triple vowel, and other edge cases to form more fluid random words.              
+                chArray[i] = allowedKeys[Random.Range(0, allowedKeys.Length)];
+            }
+        }        
         AddTranslation(word, new string(chArray));
         return new string(chArray);
     }
@@ -35,8 +43,8 @@ public class Language {
                 sentence += words[i] + " ";
             else
                 sentence += words[i];       
-        }
-        Debug.Log(sentence);
+        }       
+        PrintDictionary();
         return sentence;
     }
 
@@ -53,5 +61,13 @@ public class Language {
     public void PrintAlphabet()
     {
         Debug.Log(ac.alphabetKeys.Length);
+    }
+
+    public void PrintDictionary()
+    {
+        foreach(string key in languageDictionary.Keys)
+        {
+            Debug.Log(key + " " + languageDictionary[key]);
+        }       
     }
 }

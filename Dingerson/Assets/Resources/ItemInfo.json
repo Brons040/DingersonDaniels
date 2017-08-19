@@ -2,7 +2,7 @@
     "missions": [
         {
             "missionId": 0,
-            "missionText": "Dump?",
+            "missionText": "Is Josh a derpy old guy?",
             "missionName": "Dump Test",
             "options": [
                 {
@@ -35,35 +35,10 @@
         },
 		{
             "missionId": 1,
-            "missionText": "Dump1?",
+            "missionText": "Yes he Is",
             "missionName": "Dump Test",
             "options": [
-                {
-                    "optionsText": "Yes",
-                    "_missionId": 1,
-                    "dropChance": 50,
-                    "attributeModifier": {
-                        "type": 3,
-                        "amount": 2
-                    },
-                    "resourceModifier": {
-                        "type": 0,
-                        "amount": 100
-                    }
-                },
-                {
-                    "optionsText": "No",
-                    "_missionId": 2,
-                    "dropChance": 100,
-                    "attributeModifier": {
-                        "type": 3,
-                        "amount": -2
-                    },
-                    "resourceModifier": {
-                        "type": 0,
-                        "amount": -50
-                    }
-                }           
+                          
             ]
         },
 		{
